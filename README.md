@@ -2,8 +2,6 @@
 
 A comprehensive guide to extracting source code, design tokens, and assets from Figma Make files.
 
-<a href="https://www.buymeacoffee.com/albertsikkema" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
 ## Quick Start
 
 ```bash
@@ -303,6 +301,10 @@ The generated app omits React.StrictMode to avoid timer/animation issues with Fr
 | 2 | `02-extract-source-code.js` | `output/source_files/` |
 | 3 | `03-extract-design-tokens.js` | `output/design-tokens.json` |
 | 4 | `04-create-react-app.js` | `output/react_app/` |
+
+---
+
+<a href="https://www.buymeacoffee.com/albertsikkema" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ---
 
