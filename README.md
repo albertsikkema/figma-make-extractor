@@ -2,6 +2,8 @@
 
 A comprehensive guide to extracting source code, design tokens, and assets from Figma Make files.
 
+<a href="https://www.buymeacoffee.com/albertsikkema" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 ## Quick Start
 
 ```bash
