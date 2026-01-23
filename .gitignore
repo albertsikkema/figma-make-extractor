@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Generated output
+output/
+
+# Source files (user provides these)
+*.make
+
+# npm
+package-lock.json
+package.json
