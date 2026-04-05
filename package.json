@@ -1,0 +1,53 @@
+{
+  "name": "figma-make-extractor",
+  "version": "1.0.0",
+  "author": "Abhishek Saini",
+  "description": "Figma Make Extractor - Desktop GUI & CLI",
+  "main": "dist/main/main/main.js",
+  "scripts": {
+    "dev:main": "tsc -p tsconfig.main.json -w",
+    "dev:renderer": "vite",
+    "dev": "npm run clean && concurrently \"npm run dev:renderer\" \"npm run dev:main\" \"wait-on http://localhost:5173 dist/main/main/main.js && cross-env VITE_DEV_SERVER_URL=http://localhost:5173 electron .\"",
+    "build:nsis": "cross-env ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/ ELECTRON_BUILDER_BINARIES_MIRROR=https://npmmirror.com/mirrors/electron-builder-binaries/ ELECTRON_BUILDER_OFFLINE=true npm run build",
+    "build": "npm run clean && vite build && tsc -p tsconfig.main.json && electron-builder",
+    "clean": "rimraf dist",
+    "cli": "node make_extraction/index.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.17",
+    "electron-squirrel-startup": "^1.0.1",
+    "fzstd": "^0.1.1",
+    "kiwi-schema": "^0.5.0",
+    "pako": "^2.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/adm-zip": "^0.5.8",
+    "@types/node": "^25.5.2",
+    "@types/pako": "^2.0.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.4.27",
+    "clsx": "^2.1.1",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^41.1.1",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2",
+    "electron-winstaller": "^5.4.0",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.7.0",
+    "postcss": "^8.5.8",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "rimraf": "^6.0.1",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.2.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.3",
+    "wait-on": "^9.0.4"
+  }
+}

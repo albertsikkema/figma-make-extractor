@@ -1,12 +1,36 @@
 # Dependencies
 node_modules/
+.npm/
 
-# Generated output
+# Generated build artifacts
+dist/
+release/
+releases/
+build_out/
+pack-temp/
+.builder-cache/
+*.exe
+
+# Logs
+*.log
+build-log*.txt
+build_nsis.log
+packager-log.txt
+
+# Extraction output
 output/
+*_extracted/
 
-# Source files (user provides these)
+# Source files (user-provided, generally don't commit)
 *.make
 
-# npm
-package-lock.json
-package.json
+# IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
