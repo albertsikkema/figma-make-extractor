@@ -1,4 +1,4 @@
-# Figma Make Extractor - Build Script (Simple)
+# Make Extractor - Build Script (Simple)
 $ErrorActionPreference = "Stop"
 Write-Host "🚀 Starting Build..."
 
@@ -34,7 +34,7 @@ $r | ConvertTo-Json | Set-Content release/package.json
 Write-Host "🛠️ Preparing config.json..."
 $configJson = @"
 {
-  "productName": "Figma Make Extractor",
+  "productName": "Make Extractor",
   "appId": "com.figmamake.extractor",
   "directories": {
     "output": "../build_out",

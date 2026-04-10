@@ -11,6 +11,8 @@ const dependencyManager = new DependencyManager();
 let mainWindow: any = null;
 let devServer: any = null;
 
+app.setName('Make Extractor');
+
 function createWindow() {
   const preloadPath = path.join(__dirname, 'preload.js');
   console.log('Loading preload script from:', preloadPath);
@@ -18,6 +20,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 900,
     height: 700,
+    title: 'Make Extractor',
     frame: false, // Custom title bar
     transparent: true,
     backgroundColor: '#09090b', // Matches shadcn slate-950

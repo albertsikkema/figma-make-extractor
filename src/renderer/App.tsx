@@ -121,7 +121,7 @@ export default function App() {
       <header className="h-10 w-full flex items-center justify-between px-4 bg-white/[0.02] border-b border-white/[0.05] z-50" style={{ WebkitAppRegion: 'drag' } as any}>
         <div className="flex items-center gap-2">
           <Rocket size={14} className="text-brand-primary" />
-          <span className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">Figma Make Extractor</span>
+          <span className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">Make Extractor</span>
         </div>
 
         {/* Window Controls */}
@@ -206,7 +206,7 @@ export default function App() {
             <Download size={32} />
           </div>
           <div className="text-center">
-            <p className="font-semibold text-lg">{filePath ? filePath.split('\\').pop() : 'Drop your .make file here'}</p>
+            <p className="font-semibold text-lg">{filePath ? filePath.split(/[/\\]/).pop() : 'Drop your .make file here'}</p>
             <p className="text-sm text-slate-500">{filePath ? 'Ready to launch' : 'or click to browse local files'}</p>
           </div>
 

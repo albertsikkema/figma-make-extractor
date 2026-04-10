@@ -2,7 +2,7 @@
   "name": "figma-make-extractor",
   "version": "1.0.0",
   "author": "Abhishek Saini",
-  "description": "Figma Make Extractor - Desktop GUI & CLI",
+  "description": "Make Extractor - Desktop GUI & CLI",
   "main": "dist/main/main/main.js",
   "scripts": {
     "dev:main": "tsc -p tsconfig.main.json -w",
