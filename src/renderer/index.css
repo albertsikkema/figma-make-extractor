@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #3b82f6; /* Modern Blue */
+  --color-brand-accent: #10b981; /* Success Green */
+  --color-ui-bg: #09090b; /* Slate 950 */
+  --color-ui-surface: #18181b; /* Slate 900 */
+}
+
+@layer base {
+  body {
+    @apply bg-ui-bg text-slate-100 font-sans antialiased overflow-hidden;
+  }
+  
+  /* Smooth Glassmorphism */
+  .glass {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08];
+  }
+  
+  .glass-hover {
+    @apply hover:bg-white/[0.05] transition-all duration-300;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-white/20;
+}

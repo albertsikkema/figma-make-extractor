@@ -1,0 +1,61 @@
+{
+  "productName": "Figma Make Extractor",
+  "appId": "com.figmamake.extractor",
+  "asar": false,
+  "directories": {
+    "output": "dist/build"
+  },
+  "files": [
+    "dist/main/**/*",
+    "dist/renderer/**/*",
+    "node_modules/**/*",
+    "package.json"
+  ],
+  "win": {
+    "target": "nsis",
+    "icon": "resources/app.png",
+    "extraResources": [
+      {
+        "from": "resources/win/node.exe",
+        "to": "win/node.exe"
+      }
+    ]
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": "always",
+    "createStartMenuShortcut": true,
+    "shortcutName": "Figma Make Extractor",
+    "runAfterFinish": true
+  },
+  "mac": {
+    "target": [
+      "dmg"
+    ],
+    "category": "public.app-category.developer-tools",
+    "icon": "resources/app.png",
+    "extraResources": [
+      {
+        "from": "resources/mac/node",
+        "to": "mac/node"
+      }
+    ]
+  },
+  "dmg": {
+    "title": "Figma Make Extractor ${version}",
+    "contents": [
+      {
+        "x": 130,
+        "y": 220,
+        "type": "file"
+      },
+      {
+        "x": 410,
+        "y": 220,
+        "type": "link",
+        "path": "/Applications"
+      }
+    ]
+  }
+}

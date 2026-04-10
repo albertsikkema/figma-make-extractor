@@ -9,6 +9,7 @@
     "dev:renderer": "vite",
     "dev": "npm run clean && concurrently \"npm run dev:renderer\" \"npm run dev:main\" \"wait-on http://localhost:5173 dist/main/main/main.js && cross-env VITE_DEV_SERVER_URL=http://localhost:5173 electron .\"",
     "build:nsis": "cross-env ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/ ELECTRON_BUILDER_BINARIES_MIRROR=https://npmmirror.com/mirrors/electron-builder-binaries/ ELECTRON_BUILDER_OFFLINE=true npm run build",
+    "build:mac": "npm run clean && vite build && tsc -p tsconfig.main.json && electron-builder --mac",
     "build": "npm run clean && vite build && tsc -p tsconfig.main.json && electron-builder",
     "clean": "rimraf dist",
     "cli": "node make_extraction/index.js"

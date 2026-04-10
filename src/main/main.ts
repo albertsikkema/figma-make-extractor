@@ -98,10 +98,13 @@ ipcMain.handle('start-extraction', async (event, makeFilePath: string) => {
 });
 
 function getNodePath(): string {
-  const nodeBinaryName = platform() === 'win32' ? 'node.exe' : 'node';
+  const isWin = platform() === 'win32';
+  const platformFolder = isWin ? 'win' : 'mac';
+  const nodeBinaryName = isWin ? 'node.exe' : 'node';
+  
   const bundledNodePath = app.isPackaged
-    ? path.join(process.resourcesPath, 'win', nodeBinaryName)
-    : path.join(__dirname, '../../../resources/win', nodeBinaryName);
+    ? path.join(process.resourcesPath, platformFolder, nodeBinaryName)
+    : path.join(__dirname, '../../../resources', platformFolder, nodeBinaryName);
 
   if (fs.existsSync(bundledNodePath) && fs.lstatSync(bundledNodePath).isFile()) {
     return bundledNodePath;

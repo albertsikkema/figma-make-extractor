@@ -14,8 +14,10 @@ pack-temp/
 # Logs
 *.log
 build-log*.txt
+build-nsis-log.txt
 build_nsis.log
 packager-log.txt
+error-snippet.txt
 
 # Extraction output
 output/
