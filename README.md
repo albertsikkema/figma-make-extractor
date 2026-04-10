@@ -1,4 +1,4 @@
-# Extracting Data from Figma Make (.make) Files
+# Extracting Data from Figma Make (.make) Files with Make Extractor
 
 A comprehensive guide to extracting source code, design tokens, and assets from Figma Make files.
 
@@ -6,7 +6,8 @@ A comprehensive guide to extracting source code, design tokens, and assets from 
 
 We now offer a fully-featured Desktop Application packed with its own embedded Node.js runtime, so you can extract your Figma Make files with zero dependencies and a single click!
 
-- 📦 **Download for Windows (x64)**: Download the `Figma Make Extractor Setup 1.0.0.exe` from the Releases page.
+- 📦 **Download for Windows**: Download the `Make Extractor Setup.exe` from the Releases page.
+- 🍏 **Download for macOS**: Download the `Make Extractor.pkg` for automatic installation or the `.dmg` file. balls
 - 🚀 **Zero Dependencies**: You don't need Node or npm installed.
 - 💻 **One-Click Dev Server**: The app will automatically unpack your project and start a live Vite development server for you.
 

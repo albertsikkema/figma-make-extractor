@@ -1,5 +1,5 @@
 {
-  "productName": "Figma Make Extractor",
+  "productName": "Make Extractor",
   "appId": "com.figmamake.extractor",
   "asar": false,
   "directories": {
@@ -26,12 +26,13 @@
     "allowToChangeInstallationDirectory": true,
     "createDesktopShortcut": "always",
     "createStartMenuShortcut": true,
-    "shortcutName": "Figma Make Extractor",
+    "shortcutName": "Make Extractor",
     "runAfterFinish": true
   },
   "mac": {
     "target": [
-      "dmg"
+      "dmg",
+      "pkg"
     ],
     "category": "public.app-category.developer-tools",
     "icon": "resources/app.png",
@@ -43,7 +44,7 @@
     ]
   },
   "dmg": {
-    "title": "Figma Make Extractor ${version}",
+    "title": "Make Extractor ${version}",
     "contents": [
       {
         "x": 130,

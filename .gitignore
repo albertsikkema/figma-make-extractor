@@ -36,3 +36,6 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+# Binaries
+resources/mac/node
+resources/win/node.exe

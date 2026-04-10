@@ -7,13 +7,13 @@ async function buildInstaller() {
   
   try {
     await createWindowsInstaller({
-      appDirectory: path.join(rootPath, 'build_out', 'Figma Make Extractor-win32-x64'),
+      appDirectory: path.join(rootPath, 'build_out', 'Make Extractor-win32-x64'),
       outputDirectory: path.join(rootPath, 'releases'),
       authors: 'Abhishek Saini',
-      exe: 'Figma Make Extractor.exe',
+      exe: 'Make Extractor.exe',
       setupExe: 'Figma-Make-Extractor-Setup.exe',
       noMsi: true,
-      setupRun: 'Figma Make Extractor.exe'
+      setupRun: 'Make Extractor.exe'
     });
     console.log('✅ Success! Installer created at Figma-Make-Extractor-Setup.exe');
   } catch (e) {
