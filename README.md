@@ -308,6 +308,10 @@ The generated app omits React.StrictMode to avoid timer/animation issues with Fr
 
 ---
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. Please open an issue before submitting large changes.
+
 ## License & Disclaimer
 
 This guide documents a reverse-engineering process for educational purposes. The extracted code remains subject to Figma's terms of service and any applicable licenses.
