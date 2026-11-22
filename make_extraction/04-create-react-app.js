@@ -97,6 +97,13 @@ function getDestination(fileName) {
 function fixImports(content, fileName) {
   let fixed = content;
 
+  // Tailwind v4 requires the CSS entry point to import the framework so that
+  // utility classes are generated. Figma Make's globals.css omits this, which
+  // leaves the app completely unstyled. Prepend it if missing.
+  if (fileName === 'globals.css' && !/@import\s+["']tailwindcss["']/.test(fixed)) {
+    fixed = `@import "tailwindcss";\n\n${fixed}`;
+  }
+
   // Remove version numbers from imports (e.g., @radix-ui/react-dialog@1.1.6 -> @radix-ui/react-dialog)
   fixed = fixed.replace(/@([\d.]+)(['"])/g, '$2');
 
